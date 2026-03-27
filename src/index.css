@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 30% 5%;
+  --foreground: 210 20% 98%;
+  --primary: 190 80% 50%;
+  --primary-foreground: 220 30% 5%;
+  --secondary: 215 70% 50%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 220 25% 15%;
+  --muted-foreground: 210 10% 70%;
+  --accent: 270 70% 60%;
+  --accent-foreground: 210 20% 98%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsla(var(--foreground) / 0.1);
+}
+
+body {
+  background-color: hsl(var(--background));
+  color-scheme: dark;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+body {
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+}
