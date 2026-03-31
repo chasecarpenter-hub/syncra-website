@@ -335,7 +335,6 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover touch-none"
-        style={{ filter: 'brightness(1.1) contrast(1.0) saturate(0.9) opacity(0.4)' }}
       >
         <source src="/syncra-labs-video.mp4" type="video/mp4" />
       </video>
@@ -345,8 +344,7 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
         <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain opacity-70" />
       </div>
       
-      {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-white/40 z-10" />
+
       
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
