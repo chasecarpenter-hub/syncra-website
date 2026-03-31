@@ -339,9 +339,9 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
         <source src="/syncra-labs-video.mp4" type="video/mp4" />
       </video>
       
-      {/* Watermark Overlay (Bottom Right) */}
-      <div className="absolute bottom-0 right-0 bg-white/95 border-t border-l border-slate-200 backdrop-blur-xl px-5 py-2.5 rounded-tl-3xl flex items-center shadow-lg z-20 pointer-events-none">
-        <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain opacity-70" />
+      {/* Watermark Overlay (Bottom Right) - Dark Theme */}
+      <div className="absolute bottom-0 right-0 bg-black/80 border-t border-l border-white/10 backdrop-blur-xl px-5 py-2.5 rounded-tl-3xl flex items-center shadow-2xl z-20 pointer-events-none">
+        <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain brightness-0 invert opacity-80" />
       </div>
       
 

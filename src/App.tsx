@@ -7,6 +7,14 @@ import FAQSection from './components/ui/FAQSection';
 import Footer from './components/ui/Footer';
 import { Header } from './components/ui/Header';
 import TestimonialsSection from './components/ui/TestimonialsSection';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.8, ease: "easeOut" }
+};
 
 function App() {
   return (
@@ -14,19 +22,21 @@ function App() {
       {/* Navigation Layer */}
       <Header />
 
-      <AnimatedShaderHero 
-        headline={{
-          line1: "Custom AI Solutions",
-          line2: "Built for Your Business"
-        }}
-        subtitle="We build ground-up AI agents and custom workflows tailored to your unique needs. No templates, no generic offerings, just pure engineering excellence."
-        buttons={{
-          primary: { text: "Book Your Free Discovery Call", onClick: () => { window.location.href = '#contact' } },
-          secondary: { text: "See How It Works", onClick: () => { window.location.href = '#process' } }
-        }}
-      />
+      <motion.div {...fadeInUp}>
+        <AnimatedShaderHero 
+          headline={{
+            line1: "Custom AI Solutions",
+            line2: "Built for Your Business"
+          }}
+          subtitle="We build ground-up AI agents and custom workflows tailored to your unique needs. No templates, no generic offerings, just pure engineering excellence."
+          buttons={{
+            primary: { text: "Book Your Free Discovery Call", onClick: () => { window.location.href = '#contact' } },
+            secondary: { text: "See How It Works", onClick: () => { window.location.href = '#process' } }
+          }}
+        />
+      </motion.div>
 
-      <section id="about" className="py-24 px-6 container mx-auto">
+      <motion.section id="about" className="py-24 px-6 container mx-auto" {...fadeInUp}>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary font-bold tracking-widest text-xs uppercase">Boutique Partnership</span>
@@ -55,23 +65,23 @@ function App() {
                
                {/* Gradient Overlay for text readability if needed */}
                <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none" />
-
-               {/* Watermark Overlay (Covers KlingAI Logo) */}
-               <div className="absolute bottom-0 right-0 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-tl-2xl flex items-center shadow-lg pointer-events-none z-10">
-                 <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain opacity-90" />
+ 
+               {/* Watermark Overlay - Dark Theme */}
+               <div className="absolute bottom-0 right-0 bg-black/80 backdrop-blur-md px-5 py-2.5 rounded-tl-2xl flex items-center shadow-2xl pointer-events-none z-10 border-t border-l border-white/10">
+                 <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain brightness-0 invert opacity-80" />
                </div>
-
+ 
             </div>
           </div>
-      </section>
+      </motion.section>
 
-      <ServiceAccordion />
-      <ProcessSection />
-      <DifferenceSection />
-      <ComparisonSection />
-      <FAQSection />
+      <motion.div {...fadeInUp}><ServiceAccordion /></motion.div>
+      <motion.div {...fadeInUp}><ProcessSection /></motion.div>
+      <motion.div {...fadeInUp}><DifferenceSection /></motion.div>
+      <motion.div {...fadeInUp}><ComparisonSection /></motion.div>
+      <motion.div {...fadeInUp}><FAQSection /></motion.div>
 
-      <section id="case-studies" className="py-24 px-6 container mx-auto">
+      <motion.section id="case-studies" className="py-24 px-6 container mx-auto" {...fadeInUp}>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-bold tracking-widest text-xs uppercase">Success Stories</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mt-4 mb-6">
@@ -80,9 +90,9 @@ function App() {
         </div>
         
         <TestimonialsSection />
-      </section>
+      </motion.section>
 
-      <section id="contact" className="py-24 md:py-32 bg-slate-50 flex justify-center px-4">
+      <motion.section id="contact" className="py-24 md:py-32 bg-slate-50 flex justify-center px-4" {...fadeInUp}>
         <div className="w-full max-w-3xl bg-white border border-slate-200 rounded-[2rem] p-8 md:p-12 shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 tracking-tight">Send Us a Message</h2>
           <form className="space-y-6">
@@ -124,7 +134,7 @@ function App() {
             <p className="text-center text-muted-foreground text-sm mt-6">We'll respond within 24 hours. No spam, ever.</p>
           </form>
         </div>
-      </section>
+      </motion.section>
       
       <Footer />
     </div>
