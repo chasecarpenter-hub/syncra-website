@@ -152,7 +152,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
           {/* Brand Section */}
           <div className="space-y-6">
-            <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-28 md:h-36 w-auto object-contain" />
+            <img src="/syncra-labs-logo-new.png" alt="Syncra Labs" className="h-28 md:h-36 w-auto object-contain mix-blend-multiply" />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Evolving businesses through custom AI intelligence and automated workflow mapping. We build the future of your operation, today.
             </p>
