@@ -328,7 +328,7 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
   const canvasRef = useShaderBackground();
 
   return (
-    <div className={`relative w-full h-[70vh] md:h-[85vh] min-h-[600px] mt-16 md:mt-24 rounded-b-[40px] overflow-hidden bg-background ${className}`}>
+    <div className={`relative w-full h-[70vh] md:h-[85vh] min-h-[600px] overflow-hidden bg-background ${className}`}>
       <video
         autoPlay
         loop
@@ -351,15 +351,15 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
         {/* Hero Content Overlay */}
         <div className="max-w-5xl mx-auto space-y-6">
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
               {headline.line1}
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.3))' }}>
               {headline.line2}
             </h1>
           </div>
           
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/90 font-light leading-relaxed" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             {subtitle}
           </p>
           
