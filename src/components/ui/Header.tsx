@@ -38,10 +38,10 @@ export function Header() {
           maxWidth: '100%',
           transition: 'top 0.4s ease, width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease',
           borderRadius: scrolled ? '9999px' : '0px',
-          backgroundColor: scrolled ? 'rgba(23, 23, 23, 0.6)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          backgroundColor: scrolled ? 'rgba(23, 23, 23, 0.6)' : 'rgba(15, 15, 15, 0.3)',
+          backdropFilter: 'blur(16px)',
           boxShadow: scrolled ? '0 4px 32px rgba(0, 0, 0, 0.2)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
         }}
       >
         <nav
