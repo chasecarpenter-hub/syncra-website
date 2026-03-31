@@ -328,40 +328,40 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
   const canvasRef = useShaderBackground();
 
   return (
-    <div className={`relative w-full h-[70vh] md:h-[85vh] min-h-[600px] mt-16 md:mt-24 rounded-b-[40px] overflow-hidden bg-black ${className}`}>
+    <div className={`relative w-full h-[70vh] md:h-[85vh] min-h-[600px] mt-16 md:mt-24 rounded-b-[40px] overflow-hidden bg-background ${className}`}>
       <video
         autoPlay
         loop
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover touch-none"
-        style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.2)' }}
+        style={{ filter: 'brightness(1.1) contrast(1.0) saturate(0.9) opacity(0.4)' }}
       >
         <source src="/syncra-labs-video.mp4" type="video/mp4" />
       </video>
       
       {/* Watermark Overlay (Bottom Right) */}
-      <div className="absolute bottom-0 right-0 bg-black/98 border-t border-l border-white/5 backdrop-blur-xl px-5 py-2.5 rounded-tl-3xl flex items-center shadow-[0_-10px_40px_rgba(0,0,0,0.8)] z-20 pointer-events-none">
-        <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain opacity-90" />
+      <div className="absolute bottom-0 right-0 bg-white/95 border-t border-l border-slate-200 backdrop-blur-xl px-5 py-2.5 rounded-tl-3xl flex items-center shadow-lg z-20 pointer-events-none">
+        <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain opacity-70" />
       </div>
       
-      {/* Overlay to further mute the video and ensure text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-white/40 z-10" />
       
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
         {/* Hero Content Overlay */}
         <div className="max-w-5xl mx-auto space-y-6">
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground">
               {headline.line1}
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">
               {headline.line2}
             </h1>
           </div>
           
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 font-light leading-relaxed">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
             {subtitle}
           </p>
           
@@ -369,7 +369,7 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
             {buttons?.primary && (
               <button 
                 onClick={buttons.primary.onClick}
-                className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]"
+                className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-full transition-all hover:scale-105 hover:shadow-xl"
               >
                 {buttons.primary.text}
               </button>
@@ -377,7 +377,7 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
             {buttons?.secondary && (
               <button 
                 onClick={buttons.secondary.onClick}
-                className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-bold transition-all hover:scale-105"
+                className="px-8 py-4 bg-slate-100 hover:bg-slate-200 border border-slate-200 text-foreground rounded-full font-bold transition-all hover:scale-105"
               >
                 {buttons.secondary.text}
               </button>
@@ -438,14 +438,14 @@ void main(void) {
     
     // 1. Deep Background Glow
     float d = length(uv);
-    col = mix(vec3(0.01, 0.02, 0.05), vec3(0), d*0.5);
+    col = mix(vec3(0.98, 0.99, 1.0), vec3(1.0), d*0.5);
     
     // 2. Subtle Grid System
     vec2 grid_uv = uv * 15.0;
     vec2 grid_id = floor(grid_uv);
     vec2 grid_f = fract(grid_uv) - 0.5;
     float grid_line = smoothstep(0.48, 0.5, max(abs(grid_f.x), abs(grid_f.y)));
-    col += grid_line * vec3(0.05, 0.1, 0.2) * (1.0 - d*0.8);
+    col -= grid_line * vec3(0.05, 0.1, 0.2) * (1.0 - d*0.8);
     
     // 3. Neural Synapses (Data Flows)
     for(float i=1.0; i<4.0; i++) {
@@ -454,20 +454,20 @@ void main(void) {
         p += 0.2 * vec2(sin(t*0.2 + i), cos(t*0.3 - i));
         
         float c = connection(p + i*0.5, t);
-        // Pulse colors: Cyan -> Violet
-        vec3 pulseColor = mix(vec3(0.0, 0.8, 1.0), vec3(0.5, 0.0, 1.0), sin(T + i)*0.5+0.5);
-        col += c * pulseColor * (0.5 + 0.5*sin(T*2.0 + i*1.5));
+        // Pulse colors: Azure -> Indigo
+        vec3 pulseColor = mix(vec3(0.1, 0.5, 0.9), vec3(0.4, 0.3, 0.8), sin(T + i)*0.5+0.5);
+        col = mix(col, pulseColor, c * (0.3 + 0.3*sin(T*2.0 + i*1.5)));
     }
     
     // 4. Interactive Nodes (Reactive to Mouse)
     if (pointerCount > 0) {
         float mouseDist = length(uv - mouse);
-        float nodeGlow = 0.02 / mouseDist;
-        col += nodeGlow * vec3(0.0, 1.0, 0.8) * 0.5;
+        float nodeGlow = 0.01 / mouseDist;
+        col = mix(col, vec3(0.1, 0.4, 0.9), nodeGlow * 0.3);
         
         // Ripple effect around mouse
         float ripple = sin(mouseDist * 20.0 - T * 5.0) * 0.5 + 0.5;
-        col += ripple * smoothstep(0.2, 0.0, mouseDist) * vec3(0.0, 0.5, 1.0) * 0.2;
+        col = mix(col, vec3(0.2, 0.5, 1.0), ripple * smoothstep(0.2, 0.0, mouseDist) * 0.1);
     }
     
     // 5. Ambient "Data" Particles

@@ -89,7 +89,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent stroke-neutral-300 font-[helvetica] text-7xl font-bold dark:stroke-neutral-200"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -137,7 +137,7 @@ export const FooterBackgroundGradient = () => {
       className="absolute inset-0 z-0 pointer-events-none"
       style={{
         background:
-          "radial-gradient(125% 125% at 50% 10%, #0F0F1166 50%, #3ca2fa33 100%)",
+          "radial-gradient(125% 125% at 50% 10%, hsl(var(--background)) 50%, hsl(var(--primary) / 0.05) 100%)",
       }}
     />
   );
@@ -145,7 +145,7 @@ export const FooterBackgroundGradient = () => {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black pt-24 pb-12 overflow-hidden border-t border-white/5">
+    <footer className="relative bg-slate-50 pt-24 pb-12 overflow-hidden border-t border-slate-200">
       <FooterBackgroundGradient />
       
       <div className="relative z-10 container mx-auto px-6">
@@ -153,14 +153,14 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-28 md:h-36 w-auto object-contain" />
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Evolving businesses through custom AI intelligence and automated workflow mapping. We build the future of your operation, today.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="p-2 bg-white/5 rounded-full text-gray-400 hover:text-cyan-400 hover:bg-white/10 transition-all">
+              <a href="#" className="p-2 bg-slate-100 rounded-full text-muted-foreground hover:text-primary hover:bg-slate-200 transition-all">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full text-gray-400 hover:text-cyan-400 hover:bg-white/10 transition-all">
+              <a href="#" className="p-2 bg-slate-100 rounded-full text-muted-foreground hover:text-primary hover:bg-slate-200 transition-all">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>
@@ -168,33 +168,33 @@ export default function Footer() {
 
           {/* Platform Links */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Platform</h4>
+            <h4 className="text-foreground font-bold uppercase tracking-widest text-xs">Platform</h4>
             <ul className="space-y-4">
-              <li><a href="#services" className="text-gray-400 text-sm hover:text-white transition-colors">Services</a></li>
-              <li><a href="#process" className="text-gray-400 text-sm hover:text-white transition-colors">Our Process</a></li>
-              <li><a href="#why-us" className="text-gray-400 text-sm hover:text-white transition-colors">Why Software Fails</a></li>
-              <li><a href="#compare" className="text-gray-400 text-sm hover:text-white transition-colors">Comparison</a></li>
+              <li><a href="#services" className="text-muted-foreground text-sm hover:text-primary transition-colors">Services</a></li>
+              <li><a href="#process" className="text-muted-foreground text-sm hover:text-primary transition-colors">Our Process</a></li>
+              <li><a href="#why-us" className="text-muted-foreground text-sm hover:text-primary transition-colors">Why Software Fails</a></li>
+              <li><a href="#compare" className="text-muted-foreground text-sm hover:text-primary transition-colors">Comparison</a></li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Company</h4>
+            <h4 className="text-foreground font-bold uppercase tracking-widest text-xs">Company</h4>
             <ul className="space-y-4">
-              <li><a href="#faq" className="text-gray-400 text-sm hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#case-studies" className="text-gray-400 text-sm hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#faq" className="text-muted-foreground text-sm hover:text-primary transition-colors">FAQ</a></li>
+              <li><a href="#case-studies" className="text-muted-foreground text-sm hover:text-primary transition-colors">Case Studies</a></li>
+              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="text-muted-foreground text-sm hover:text-primary transition-colors">Terms of Service</a></li>
             </ul>
           </div>
 
           {/* Newsletter/Contact */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold uppercase tracking-widest text-xs">Get Started</h4>
-            <p className="text-gray-400 text-sm">Ready to automate your operations? Book a 30-min discovery call.</p>
+            <h4 className="text-foreground font-bold uppercase tracking-widest text-xs">Get Started</h4>
+            <p className="text-muted-foreground text-sm">Ready to automate your operations? Book a 30-min discovery call.</p>
             <a 
               href="#contact" 
-              className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500 text-black font-bold rounded-full hover:bg-cyan-400 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-full hover:opacity-90 transition-all"
             >
               Book Strategy Call
               <ExternalLink className="w-4 h-4" />
@@ -208,18 +208,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:row items-center justify-between gap-4">
-          <p className="text-gray-500 text-[10px] md:text-xs text-center md:text-left">
+        <div className="pt-8 border-t border-slate-200 flex flex-col md:row items-center justify-between gap-4">
+          <p className="text-slate-400 text-[10px] md:text-xs text-center md:text-left">
             © 2026 SYNCRA LABS INC. ALL RIGHTS RESERVED.
           </p>
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-gray-500 text-[10px] md:text-xs">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-slate-400 text-[10px] md:text-xs">
             <span className="flex items-center gap-2">
               <User className="w-3 h-3" /> Chase Carpenter
             </span>
-            <a href="tel:513-835-2051" className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href="tel:513-835-2051" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-3 h-3" /> 513-835-2051
             </a>
-            <a href="mailto:chase@syncralabs.ai" className="flex items-center gap-2 hover:text-white transition-colors">
+            <a href="mailto:chase@syncralabs.ai" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-3 h-3" /> chase@syncralabs.ai
             </a>
           </div>

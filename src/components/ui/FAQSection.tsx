@@ -58,17 +58,17 @@ const FAQ_DATA: FAQItem[] = [
 
 function AccordionItem({ question, answer, isOpen, onClick }: { question: string; answer: string; isOpen: boolean; onClick: () => void }) {
   return (
-    <div className="border-b border-white/10 last:border-0 group">
+    <div className="border-b border-slate-100 last:border-0 group">
       <button
         onClick={onClick}
         className="w-full py-6 md:py-8 flex items-center justify-between text-left transition-all duration-300 gap-4"
       >
-        <span className={`text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 ${isOpen ? 'text-cyan-400' : 'text-white group-hover:text-cyan-400/80'}`}>
+        <span className={`text-lg md:text-xl font-bold tracking-tight transition-colors duration-300 ${isOpen ? 'text-primary' : 'text-foreground group-hover:text-primary/80'}`}>
           {question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          className={`flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isOpen ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-white/10 text-white/40'}`}
+          className={`flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isOpen ? 'border-primary bg-primary/10 text-primary' : 'border-slate-200 text-slate-400'}`}
         >
           <ChevronDown className="w-4 h-4" />
         </motion.div>
@@ -82,7 +82,7 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
             transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
             className="overflow-hidden"
           >
-            <div className="pb-8 text-gray-400 text-base md:text-lg leading-relaxed max-w-4xl">
+            <div className="pb-8 text-muted-foreground text-base md:text-lg leading-relaxed max-w-4xl">
               {answer}
             </div>
           </motion.div>
@@ -96,26 +96,26 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-zinc-950 overflow-hidden">
+    <section id="faq" className="py-24 md:py-32 bg-background overflow-hidden border-t border-slate-50">
       <div className="max-w-4xl mx-auto px-6 md:px-8">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
           >
-            Got Questions? <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">We've Got Answers.</span>
+            Got Questions? <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">We've Got Answers.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-gray-400 text-lg md:text-xl leading-relaxed"
+            className="text-muted-foreground text-lg md:text-xl leading-relaxed"
           >
             Everything you need to know before we talk.
           </motion.p>
         </div>
 
-        <div className="bg-white/[0.02] backdrop-blur-sm border border-white/5 rounded-[40px] px-8 md:px-12 py-4">
+        <div className="bg-white border border-slate-200 rounded-[40px] px-8 md:px-12 py-4 shadow-sm hover:shadow-lg transition-shadow">
           {FAQ_DATA.map((item, index) => (
             <AccordionItem
               key={index}

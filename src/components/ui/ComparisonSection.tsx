@@ -28,9 +28,9 @@ const COMPARISON_DATA: ComparisonRow[] = [
 function CellValue({ value, isSyncra = false }: { value: string | boolean; isSyncra?: boolean }) {
   if (typeof value === "boolean") {
     return value ? (
-      <Check className={`w-5 h-5 ${isSyncra ? "text-cyan-400" : "text-gray-500"}`} />
+      <Check className={`w-5 h-5 ${isSyncra ? "text-primary" : "text-slate-400"}`} />
     ) : (
-      <X className="w-5 h-5 text-gray-700" />
+      <X className="w-5 h-5 text-slate-300" />
     );
   }
   
@@ -39,7 +39,7 @@ function CellValue({ value, isSyncra = false }: { value: string | boolean; isSyn
   }
 
   return (
-    <span className={`font-medium ${isSyncra ? "text-white" : "text-gray-400"}`}>
+    <span className={`font-medium ${isSyncra ? "text-foreground" : "text-muted-foreground"}`}>
       {value}
     </span>
   );
@@ -47,33 +47,33 @@ function CellValue({ value, isSyncra = false }: { value: string | boolean; isSyn
 
 export default function ComparisonSection() {
   return (
-    <section id="compare" className="py-24 md:py-32 bg-black overflow-hidden border-t border-white/5">
+    <section id="compare" className="py-24 md:py-32 bg-background overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
           >
-            Go Ahead. <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Compare Us.</span>
+            Go Ahead. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Compare Us.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             Discover why businesses choose Syncra Labs over traditional agencies and generic self-managed tools.
           </motion.p>
         </div>
 
-        <div className="relative overflow-x-auto scrollbar-hide rounded-[32px] border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+        <div className="relative overflow-x-auto scrollbar-hide rounded-[32px] border border-slate-200 bg-white shadow-xl">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-bottom border-white/10">
-                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-gray-500 w-[30%]">Feature</th>
-                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-cyan-500 bg-cyan-500/[0.03] w-[23%] text-center border-x border-white/5">Syncra Labs</th>
-                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-gray-500 w-[23%] text-center">Traditional AI Agency</th>
-                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-gray-500 w-[23%] text-center">Self-Managed Tools</th>
+              <tr className="border-bottom border-slate-100">
+                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground w-[30%]">Feature</th>
+                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-primary bg-primary/[0.03] w-[23%] text-center border-x border-slate-100">Syncra Labs</th>
+                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground w-[23%] text-center">Traditional AI Agency</th>
+                <th className="py-6 px-8 text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground w-[23%] text-center">Self-Managed Tools</th>
               </tr>
             </thead>
             <tbody>
@@ -84,12 +84,12 @@ export default function ComparisonSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="group border-t border-white/5 hover:bg-white/[0.04] transition-all duration-300"
+                  className="group border-t border-slate-50 hover:bg-slate-50 transition-all duration-300"
                 >
-                  <td className="py-4 px-8 text-white font-semibold text-base">
+                  <td className="py-4 px-8 text-foreground font-semibold text-base">
                     {row.feature}
                   </td>
-                  <td className="py-4 px-8 text-center bg-cyan-500/[0.02] border-x border-white/5 group-hover:bg-cyan-500/[0.05]">
+                  <td className="py-4 px-8 text-center bg-primary/[0.02] border-x border-slate-50 group-hover:bg-primary/[0.05]">
                     <div className="flex justify-center">
                       <CellValue value={row.syncra} isSyncra />
                     </div>

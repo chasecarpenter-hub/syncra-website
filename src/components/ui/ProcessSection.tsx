@@ -46,7 +46,7 @@ const STEPS = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-24 md:py-32 bg-black overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -54,7 +54,7 @@ export function ProcessSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-xs font-bold uppercase tracking-widest mb-6"
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6"
           >
             How It Works
           </motion.div>
@@ -63,16 +63,16 @@ export function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
           >
-            A Proven Process, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Every Time</span>
+            A Proven Process, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Every Time</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-gray-400 text-lg md:text-xl leading-relaxed"
+            className="text-muted-foreground text-lg md:text-xl leading-relaxed"
           >
             From first conversation to optimized systems, our transparent four-step process keeps you informed every step of the way.
           </motion.p>
@@ -93,7 +93,7 @@ export function ProcessSection() {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="h-full bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-white/10 rounded-[32px] p-8 transition-all duration-500 hover:-translate-y-2 flex flex-col items-start text-left">
+                <div className="h-full bg-white border border-slate-200 hover:border-primary/20 rounded-[32px] p-8 transition-all duration-500 hover:-translate-y-2 flex flex-col items-start text-left shadow-sm hover:shadow-xl">
                   {/* Step Number Circle */}
                   <div className={cn(
                     "w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mb-8 relative transition-transform duration-500 group-hover:scale-110",
@@ -110,21 +110,21 @@ export function ProcessSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-4 tracking-tight group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 tracking-tight group-hover:text-primary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-400 text-base leading-relaxed mb-8 flex-grow">
+                  <p className="text-muted-foreground text-base leading-relaxed mb-8 flex-grow">
                     {step.description}
                   </p>
 
                   {/* Footer Label */}
-                  <div className="flex items-center gap-2.5 pt-6 border-t border-white/5 w-full">
+                  <div className="flex items-center gap-2.5 pt-6 border-t border-slate-100 w-full">
                     <div className={cn("p-2 rounded-lg bg-opacity-10", step.color)}>
                       <div className={cn("text-xs font-bold", step.color.replace('bg-', 'text-'))}>
                         {step.icon}
                       </div>
                     </div>
-                    <span className="text-sm font-semibold text-gray-400 group-hover:text-white transition-colors">
+                    <span className="text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors">
                       {step.label}
                     </span>
                   </div>

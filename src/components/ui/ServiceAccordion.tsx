@@ -69,11 +69,11 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
       onMouseEnter={onMouseEnter}
     >
       {/* Sleek Gradient Background */}
-      <div className={`absolute inset-0 bg-gradient-to-br from-neutral-800/20 to-black transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
+      <div className={`absolute inset-0 bg-gradient-to-br from-slate-50 to-white transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
 
       {/* Active Glow Animation (Edge) */}
       {isActive && (
-        <div className="absolute inset-0 rounded-2xl border-2 border-cyan-500/30 animate-pulse pointer-events-none shadow-[inset_0_0_30px_rgba(6,182,212,0.1)]"></div>
+        <div className="absolute inset-0 rounded-2xl border-2 border-primary/20 animate-pulse pointer-events-none shadow-[inset_0_0_30px_rgba(59,130,246,0.05)]"></div>
       )}
 
       {/* Content Container */}
@@ -88,7 +88,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
              } : {}}
              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
            >
-             <Icon size={isActive ? 180 : 40} color={isActive ? item.color : '#ffffff'} strokeWidth={1} />
+             <Icon size={isActive ? 180 : 40} color={isActive ? item.color : 'hsl(var(--muted-foreground))'} strokeWidth={1} />
            </motion.div>
         </div>
 
@@ -96,7 +96,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
         <div className="relative z-10">
           <h3
             className={`
-              text-white font-bold
+              text-foreground font-bold
               transition-all duration-500 ease-in-out
               ${
                 isActive
@@ -115,7 +115,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ item, isActive, onMouseEn
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-gray-400 text-xl leading-relaxed max-w-sm"
+                className="text-muted-foreground text-xl leading-relaxed max-w-sm"
               >
                 {item.description}
               </motion.p>
@@ -131,25 +131,25 @@ export const ServiceAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="py-24 bg-[#0a0a0a] border-t border-white/5 overflow-hidden">
+    <section id="services" className="py-24 bg-background border-t border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           
           {/* Left Side: Text Content */}
           <div className="lg:w-1/3 text-left">
-            <h2 className="text-sm font-bold tracking-widest text-cyan-400 uppercase mb-4">
+            <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">
               Our Services
             </h2>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6">
-              Bespoke AI <br/>Solutions for <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Growth</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6">
+              Bespoke AI <br/>Solutions for <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Growth</span>
             </h1>
-            <p className="text-lg text-gray-400 mb-8 max-w-md">
+            <p className="text-lg text-muted-foreground mb-8 max-w-md">
               We don't believe in one-size-fits-all. Every workflow we build is custom-tailored to your unique business DNA.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="bg-white text-black font-bold px-8 py-3 rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="bg-primary text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Build
               </a>

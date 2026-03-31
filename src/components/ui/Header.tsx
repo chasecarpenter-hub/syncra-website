@@ -27,6 +27,7 @@ export function Header() {
     <>
       {/* ─── Desktop Header ─── */}
       <header
+        className="transition-all duration-500 ease-in-out"
         style={{
           position: 'fixed',
           top: scrolled ? '12px' : '0px',
@@ -37,10 +38,10 @@ export function Header() {
           maxWidth: '100%',
           transition: 'top 0.4s ease, width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease',
           borderRadius: scrolled ? '9999px' : '0px',
-          backgroundColor: scrolled ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.6)',
-          backdropFilter: 'blur(12px)',
-          boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.5)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(255,255,255,0.04)',
+          backgroundColor: scrolled ? 'hsla(var(--background) / 0.85)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(12px)' : 'none',
+          boxShadow: scrolled ? '0 4px 32px hsla(222, 47%, 11%, 0.1)' : 'none',
+          borderBottom: scrolled ? '1px solid hsla(222, 47%, 11%, 0.08)' : 'none',
         }}
       >
         <nav
@@ -85,7 +86,7 @@ export function Header() {
                 key={link.label}
                 href={link.href}
                 style={{
-                  color: '#9ca3af',
+                  color: scrolled ? '#1f2937' : '#ffffff',
                   fontWeight: 600,
                   fontSize: scrolled ? '11px' : '14px',
                   padding: scrolled ? '5px 8px' : '8px 12px',
@@ -95,11 +96,11 @@ export function Header() {
                   transition: 'color 0.2s, background-color 0.2s, font-size 0.4s, padding 0.4s',
                 }}
                 onMouseEnter={(e) => {
-                  (e.target as HTMLAnchorElement).style.color = '#ffffff';
-                  (e.target as HTMLAnchorElement).style.backgroundColor = 'rgba(255,255,255,0.1)';
+                  (e.target as HTMLAnchorElement).style.color = 'hsl(var(--primary))';
+                  (e.target as HTMLAnchorElement).style.backgroundColor = 'hsla(var(--primary) / 0.05)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.target as HTMLAnchorElement).style.color = '#9ca3af';
+                  (e.target as HTMLAnchorElement).style.color = scrolled ? '#1f2937' : '#ffffff';
                   (e.target as HTMLAnchorElement).style.backgroundColor = 'transparent';
                 }}
               >
@@ -116,18 +117,18 @@ export function Header() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#22d3ee',
-                color: '#000000',
+                backgroundColor: 'hsl(var(--primary))',
+                color: '#ffffff',
                 fontWeight: 700,
                 fontSize: scrolled ? '11px' : '14px',
                 padding: scrolled ? '7px 16px' : '10px 24px',
                 borderRadius: '9999px',
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
-                transition: 'background-color 0.2s, font-size 0.4s, padding 0.4s',
+                transition: 'background-color 0.2s, font-size 0.4s, padding 0.4s, transform 0.2s',
               }}
-              onMouseEnter={(e) => { (e.target as HTMLAnchorElement).style.backgroundColor = '#67e8f9'; }}
-              onMouseLeave={(e) => { (e.target as HTMLAnchorElement).style.backgroundColor = '#22d3ee'; }}
+              onMouseEnter={(e) => { (e.target as HTMLAnchorElement).style.opacity = '0.9'; (e.target as HTMLAnchorElement).style.transform = 'scale(1.05)'; }}
+              onMouseLeave={(e) => { (e.target as HTMLAnchorElement).style.opacity = '1'; (e.target as HTMLAnchorElement).style.transform = 'scale(1)'; }}
             >
               Contact
             </a>
