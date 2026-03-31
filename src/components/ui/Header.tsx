@@ -38,10 +38,10 @@ export function Header() {
           maxWidth: '100%',
           transition: 'top 0.4s ease, width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease',
           borderRadius: scrolled ? '9999px' : '0px',
-          backgroundColor: scrolled ? 'hsla(var(--background) / 0.85)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(12px)' : 'none',
-          boxShadow: scrolled ? '0 4px 32px hsla(222, 47%, 11%, 0.1)' : 'none',
-          borderBottom: scrolled ? '1px solid hsla(222, 47%, 11%, 0.08)' : 'none',
+          backgroundColor: scrolled ? 'rgba(23, 23, 23, 0.6)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          boxShadow: scrolled ? '0 4px 32px rgba(0, 0, 0, 0.2)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
         }}
       >
         <nav
@@ -86,7 +86,7 @@ export function Header() {
                 key={link.label}
                 href={link.href}
                 style={{
-                  color: scrolled ? '#1f2937' : '#ffffff',
+                  color: '#ffffff',
                   fontWeight: 600,
                   fontSize: scrolled ? '11px' : '14px',
                   padding: scrolled ? '5px 8px' : '8px 12px',
@@ -100,7 +100,7 @@ export function Header() {
                   (e.target as HTMLAnchorElement).style.backgroundColor = 'hsla(var(--primary) / 0.05)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.target as HTMLAnchorElement).style.color = scrolled ? '#1f2937' : '#ffffff';
+                  (e.target as HTMLAnchorElement).style.color = '#ffffff';
                   (e.target as HTMLAnchorElement).style.backgroundColor = 'transparent';
                 }}
               >
