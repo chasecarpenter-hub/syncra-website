@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "npx tinacms dev -c \"next dev\"",
-    "build": "npx tinacms build && next build",
+    "dev": "tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,6 +20,7 @@
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
+    "@tinacms/cli": "^2.2.1",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
