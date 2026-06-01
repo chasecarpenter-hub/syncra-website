@@ -10,6 +10,7 @@ import Footer from '@/components/ui/Footer';
 import { Header } from '@/components/ui/Header';
 import TestimonialsSection from '@/components/ui/TestimonialsSection';
 import { motion } from 'framer-motion';
+import ToolsMarquee from '@/components/ui/ToolsMarquee';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -38,7 +39,9 @@ export default function Home() {
         />
       </motion.div>
 
-      <motion.section id="about" className="py-24 px-6 bg-slate-950" {...fadeInUp}>
+      <ToolsMarquee />
+
+      <motion.section id="about" className="py-14 px-6 bg-slate-950" {...fadeInUp}>
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -83,9 +86,9 @@ export default function Home() {
       <motion.div {...fadeInUp}><ComparisonSection /></motion.div>
       <motion.div {...fadeInUp}><FAQSection /></motion.div>
 
-      <motion.section id="case-studies" className="py-24 px-6 bg-slate-950" {...fadeInUp}>
+      <motion.section id="case-studies" className="py-14 px-6 bg-slate-950" {...fadeInUp}>
         <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-primary font-bold tracking-widest text-xs uppercase">Success Stories</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mt-4 mb-6">
             Straight answers, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">before you book.</span>
@@ -96,7 +99,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <motion.section id="contact" className="py-24 md:py-32 bg-slate-50 flex justify-center px-4" {...fadeInUp}>
+      <motion.section id="contact" className="py-14 md:py-20 bg-slate-50 flex justify-center px-4" {...fadeInUp}>
         <div className="w-full max-w-3xl bg-white border border-slate-200 rounded-[2rem] p-8 md:p-12 shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 tracking-tight">Book a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">free discovery call.</span></h2>
           <form className="space-y-6">

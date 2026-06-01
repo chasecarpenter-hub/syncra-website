@@ -133,7 +133,7 @@ export const ServiceAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="py-24 bg-slate-950 border-t border-white/5 overflow-hidden">
+    <section id="services" className="py-14 bg-slate-950 border-t border-white/5 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 

@@ -46,10 +46,10 @@ const STEPS = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-24 md:py-32 bg-slate-950 overflow-hidden">
+    <section id="process" className="py-14 md:py-20 bg-slate-950 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}

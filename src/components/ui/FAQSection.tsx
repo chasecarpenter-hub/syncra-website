@@ -96,9 +96,9 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-slate-950 overflow-hidden border-t border-white/5">
+    <section id="faq" className="py-14 md:py-20 bg-slate-950 overflow-hidden border-t border-white/5">
       <div className="max-w-4xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

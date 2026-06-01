@@ -47,9 +47,9 @@ function CellValue({ value, isSyncra = false }: { value: string | boolean; isSyn
 
 export default function ComparisonSection() {
   return (
-    <section id="compare" className="py-24 md:py-32 bg-slate-950 overflow-hidden border-t border-white/5">
+    <section id="compare" className="py-14 md:py-20 bg-slate-950 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
