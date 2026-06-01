@@ -155,27 +155,27 @@ const DIFFERENCES = [
 
 export function DifferenceSection() {
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-background overflow-hidden">
+    <section id="why-us" className="py-24 md:py-32 bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         <div className="text-center mb-20">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-primary font-bold uppercase tracking-[0.4em] text-xs block mb-4"
           >
             Why Syncra Labs
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
             The Difference Between <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Software and a Partner</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             We don't hand you a tool and walk away. We build around your business and stay invested in what comes next.
           </motion.p>

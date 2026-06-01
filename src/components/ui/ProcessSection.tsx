@@ -46,7 +46,7 @@ const STEPS = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-24 md:py-32 bg-slate-50 overflow-hidden">
+    <section id="process" className="py-24 md:py-32 bg-slate-950 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -63,7 +63,7 @@ export function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
             A Proven Process, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Every Time</span>
           </motion.h2>
@@ -72,7 +72,7 @@ export function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-lg md:text-xl leading-relaxed"
+            className="text-slate-400 text-lg md:text-xl leading-relaxed"
           >
             From first conversation to optimized systems, our transparent four-step process keeps you informed every step of the way.
           </motion.p>

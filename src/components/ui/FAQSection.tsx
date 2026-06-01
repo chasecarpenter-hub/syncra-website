@@ -96,20 +96,20 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-background overflow-hidden border-t border-slate-50">
+    <section id="faq" className="py-24 md:py-32 bg-slate-950 overflow-hidden border-t border-white/5">
       <div className="max-w-4xl mx-auto px-6 md:px-8">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
             Got Questions? <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">We've Got Answers.</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-muted-foreground text-lg md:text-xl leading-relaxed"
+            className="text-slate-400 text-lg md:text-xl leading-relaxed"
           >
             Everything you need to know before we talk.
           </motion.p>

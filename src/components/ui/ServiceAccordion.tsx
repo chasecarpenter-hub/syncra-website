@@ -133,19 +133,19 @@ export const ServiceAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="py-24 bg-background border-t border-slate-100 overflow-hidden">
+    <section id="services" className="py-24 bg-slate-950 border-t border-white/5 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          
+
           {/* Left Side: Text Content */}
           <div className="lg:w-1/3 text-left">
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">
               Our Services
             </h2>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6">
               Bespoke AI <br/>Solutions for <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Growth</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-md">
+            <p className="text-lg text-slate-400 mb-8 max-w-md">
               We don't believe in one-size-fits-all. Every workflow we build is custom-tailored to your unique business DNA.
             </p>
             <div className="flex flex-wrap gap-4">

@@ -47,20 +47,20 @@ function CellValue({ value, isSyncra = false }: { value: string | boolean; isSyn
 
 export default function ComparisonSection() {
   return (
-    <section id="compare" className="py-24 md:py-32 bg-background overflow-hidden border-t border-slate-100">
+    <section id="compare" className="py-24 md:py-32 bg-slate-950 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
             Go Ahead. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Compare Us.</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             Discover why businesses choose Syncra Labs over traditional agencies and generic self-managed tools.
           </motion.p>

@@ -1,0 +1,18 @@
+fragment HomeParts on Home {
+  __typename
+  heroLine1
+  heroLine2
+  heroSubtitle
+  heroPrimaryButton
+  heroSecondaryButton
+  aboutBadge
+  aboutHeading1
+  aboutHeading2
+  aboutText
+  aboutBullet1
+  aboutBullet2
+  aboutBullet3
+  caseStudiesHeading
+  contactHeading
+  contactSubtext
+}

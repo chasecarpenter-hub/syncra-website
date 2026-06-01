@@ -38,17 +38,18 @@ export default function Home() {
         />
       </motion.div>
 
-      <motion.section id="about" className="py-24 px-6 container mx-auto" {...fadeInUp}>
+      <motion.section id="about" className="py-24 px-6 bg-slate-950" {...fadeInUp}>
+        <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary font-bold tracking-widest text-xs uppercase">Boutique Partnership</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mt-4 mb-6">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mt-4 mb-6">
                 Your Strategic <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">AI Consultant</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 Syncra Labs isn't just another agency. We are a boutique consulting partner dedicated to building ground-up solutions that fit your business, not the other way around.
               </p>
-              <ul className="space-y-4 text-foreground font-medium">
+              <ul className="space-y-4 text-slate-300 font-medium">
                 <li className="flex items-center gap-3"><span className="text-primary">✓</span> Custom-built tools and dashboards</li>
                 <li className="flex items-center gap-3"><span className="text-primary">✓</span> Deep-dive business analysis</li>
                 <li className="flex items-center gap-3"><span className="text-primary">✓</span> Seamless integration with existing stacks</li>
@@ -73,6 +74,7 @@ export default function Home() {
 
             </div>
           </div>
+        </div>
       </motion.section>
 
       <motion.div {...fadeInUp}><ServiceAccordion /></motion.div>
@@ -81,15 +83,17 @@ export default function Home() {
       <motion.div {...fadeInUp}><ComparisonSection /></motion.div>
       <motion.div {...fadeInUp}><FAQSection /></motion.div>
 
-      <motion.section id="case-studies" className="py-24 px-6 container mx-auto" {...fadeInUp}>
+      <motion.section id="case-studies" className="py-24 px-6 bg-slate-950" {...fadeInUp}>
+        <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-bold tracking-widest text-xs uppercase">Success Stories</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground leading-tight tracking-tighter mt-4 mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mt-4 mb-6">
             Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Results</span>
           </h2>
         </div>
 
         <TestimonialsSection />
+        </div>
       </motion.section>
 
       <motion.section id="contact" className="py-24 md:py-32 bg-slate-50 flex justify-center px-4" {...fadeInUp}>
