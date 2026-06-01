@@ -65,7 +65,7 @@ export function ProcessSection() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
-            A Proven Process, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Every Time</span>
+            Custom systems, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">not generic templates.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

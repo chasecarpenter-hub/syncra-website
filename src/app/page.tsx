@@ -44,7 +44,7 @@ export default function Home() {
             <div>
               <span className="text-primary font-bold tracking-widest text-xs uppercase">Boutique Partnership</span>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mt-4 mb-6">
-                Your Strategic <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">AI Consultant</span>
+                Your Strategic <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">AI Consultant.</span>
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 Syncra Labs isn't just another agency. We are a boutique consulting partner dedicated to building ground-up solutions that fit your business, not the other way around.
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-bold tracking-widest text-xs uppercase">Success Stories</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mt-4 mb-6">
-            Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Results</span>
+            Straight answers, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">before you book.</span>
           </h2>
         </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
 
       <motion.section id="contact" className="py-24 md:py-32 bg-slate-50 flex justify-center px-4" {...fadeInUp}>
         <div className="w-full max-w-3xl bg-white border border-slate-200 rounded-[2rem] p-8 md:p-12 shadow-xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 tracking-tight">Send Us a Message</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 tracking-tight">Book a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">free discovery call.</span></h2>
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">

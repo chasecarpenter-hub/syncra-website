@@ -57,7 +57,7 @@ export function Header() {
           }}
         >
           {/* Logo */}
-          <a href="#" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <a href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <img
               src="/syncra-labs-logo-transparent.png"
               alt="Syncra Labs"

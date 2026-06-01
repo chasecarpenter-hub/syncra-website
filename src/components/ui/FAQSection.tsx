@@ -104,7 +104,7 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
-            Got Questions? <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">We've Got Answers.</span>
+            The person building your system, <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">start to finish.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

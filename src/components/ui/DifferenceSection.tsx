@@ -170,7 +170,7 @@ export function DifferenceSection() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6"
           >
-            The Difference Between <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Software and a Partner</span>
+            From bottleneck <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">to running system in weeks.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

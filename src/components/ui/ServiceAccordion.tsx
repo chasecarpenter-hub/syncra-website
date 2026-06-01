@@ -143,7 +143,7 @@ export const ServiceAccordion: React.FC = () => {
               Our Services
             </h2>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tighter mb-6">
-              Bespoke AI <br/>Solutions for <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">Growth</span>
+              Your team is doing work <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">a system should be doing.</span>
             </h1>
             <p className="text-lg text-slate-400 mb-8 max-w-md">
               We don't believe in one-size-fits-all. Every workflow we build is custom-tailored to your unique business DNA.
