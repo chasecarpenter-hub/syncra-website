@@ -329,6 +329,10 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
 }) => {
   const canvasRef = useShaderBackground();
 
+  const line2Words = headline.line2.split(' ');
+  const line2Body = line2Words.slice(0, -1).join(' ');
+  const line2Accent = line2Words[line2Words.length - 1];
+
   return (
     <div className={`relative w-full h-[70vh] md:h-[85vh] min-h-[600px] overflow-hidden bg-background ${className}`}>
       <video
@@ -340,14 +344,14 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
       >
         <source src="/syncra-labs-video.mp4" type="video/mp4" />
       </video>
-      
+
       {/* Watermark Overlay (Bottom Right) - Dark Theme */}
       <div className="absolute bottom-0 right-0 bg-black/80 border-t border-l border-white/10 backdrop-blur-xl px-5 py-2.5 rounded-tl-3xl flex items-center shadow-2xl z-20 pointer-events-none">
         <img src="/syncra-labs-logo-transparent.png" alt="Syncra Labs" className="h-5 md:h-6 w-auto object-contain brightness-0 invert opacity-80" />
       </div>
-      
 
-      
+
+
       {/* Hero Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
         {/* Hero Content Overlay */}
@@ -356,8 +360,8 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
               {headline.line1}
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.3))' }}>
-              {headline.line2}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+              {line2Body}{' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-600">{line2Accent}</span>
             </h1>
           </div>
           
